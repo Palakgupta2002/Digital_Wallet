@@ -5,6 +5,7 @@ import bodyParser from 'body-parser'
 import signUp from "./routes/signUp.js"
 import signIn from "./routes/signIn.js"
 import updateMoney from "./routes/UpdateMoney.js"
+import addTransaction from "./routes/transactionDetails.js"
 import cors from "cors"
 dotenv.config()
 const app=express();
@@ -33,3 +34,7 @@ app.use('/validateAuth',signIn)
 
 //This is for update money api
 app.use('/UpdateMoney',updateMoney)
+
+//This is for add a transaction
+
+app.use('/addTransaction',addTransaction)

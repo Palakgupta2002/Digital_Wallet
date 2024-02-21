@@ -1,7 +1,7 @@
 
 import { Button, Modal } from 'flowbite-react';
-import { useState,useContext } from 'react';
-import {EmailContext} from "../App"
+import { useState, useContext } from 'react';
+import { EmailContext } from "../App"
 const AddTransaction = () => {
   const [openModal, setOpenModal] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
@@ -30,7 +30,7 @@ const AddTransaction = () => {
       return setErrorMessage("All fields are required");
     }
     try {
-      const res = await fetch(`http://localhost:3000/addTransaction/users/${email}/transactions`, {
+      const res = await fetch(`https://digital-wallet-backend-falh.onrender.com/addTransaction/users/${email}/transactions`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -45,7 +45,7 @@ const AddTransaction = () => {
       console.log(error);
     }
   };
-  
+
   return (
     <>
       <Button gradientDuoTone="pinkToOrange" onClick={() => setOpenModal(true)}>Add Transaction</Button>

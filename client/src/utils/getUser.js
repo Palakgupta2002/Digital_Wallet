@@ -1,31 +1,30 @@
-import { useState, useEffect } from "react";
-
+import { useState, useEffect } from 'react'
 
 const useUser = (email) => {
-  
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/getUser/getUser/${email}/User`);
+        const response = await fetch(
+          `https://digital-wallet-backend-falh.onrender.com/getUser/getUser/${email}/User`,
+        )
         if (!response.ok) {
-          throw new Error('Failed to fetch user');
+          throw new Error('Failed to fetch user')
         }
-        const userData = await response.json();
-        setUser(userData);
-    
+        const userData = await response.json()
+        setUser(userData)
       } catch (error) {
-        console.error(error);
+        console.error(error)
       }
-    };
+    }
 
     if (email) {
-      fetchUser();
+      fetchUser()
     }
-  }, [email,user]);
+  }, [email, user])
 
-  return user;
-};
+  return user
+}
 
-export default useUser;
+export default useUser

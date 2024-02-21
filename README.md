@@ -1,5 +1,5 @@
 # Digital Wallet
-watch video live: [watch live](https://www.canva.com/design/DAF8jWoYxXw/dpPndZmc7QS4DqLcENDhIw/watch?utm_content=DAF8jWoYxXw&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
+watch video : [watch ](https://www.canva.com/design/DAF8jWoYxXw/dpPndZmc7QS4DqLcENDhIw/watch?utm_content=DAF8jWoYxXw&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
 ## Introduction
 ### The Digital Wallet is a web application designed to provide users with a convenient way to manage their finances. With features for both logging in and signing up, users can securely access their accounts and perform various financial transactions, including adding money and recording transactions.
 
@@ -55,7 +55,7 @@ MONGODB_URI=<your_mongodb_uri>
 
 ## ScrennShot
 
-watch video live: [watch live](https://www.canva.com/design/DAF8jWoYxXw/dpPndZmc7QS4DqLcENDhIw/watch?utm_content=DAF8jWoYxXw&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
+watch  live: [watch ](https://www.canva.com/design/DAF8jWoYxXw/dpPndZmc7QS4DqLcENDhIw/watch?utm_content=DAF8jWoYxXw&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
 
 Thank you for reading it 
 

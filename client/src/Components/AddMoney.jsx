@@ -11,19 +11,20 @@ const AddMoney = () => {
   })
   const handleChange = (e) => {
     setFormData({
-      money: e.target.value
-    })
+      money: parseFloat(e.target.value) 
+    });
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`https://digital-wallet-backend-falh.onrender.com/UpdateMoney/user/${email}/money`, {
+      const res = await fetch(`https://digital-wallet-backend-falh.onrender.com/UpdateMoney/users/${email}/money`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
       if (res.ok) {
         alert("Money is updated")
+        setOpenModal(false)
       } else {
         alert("might be some issue pls try again")
       }
@@ -47,7 +48,7 @@ const AddMoney = () => {
               <input type="number" min={0} step={5} id="money" className="block w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
                 onChange={handleChange} />
             </div>
-            <Button gradientDuoTone="pinkToOrange" type='submit' >Add transaction</Button>
+            <Button gradientDuoTone="pinkToOrange" type='submit' >Update Money</Button>
           </form>
         </Modal.Body>
       </Modal>

@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://digital-wallet-backend-falh.onrender.com',
+        target: 'https://digital-wallet-backend-falh.onrender.com ',
         secure: false,
       },
     },

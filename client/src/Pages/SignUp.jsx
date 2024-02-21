@@ -5,8 +5,10 @@ import Logo from "../assets/logo.png"
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 // import Link from 'next/link';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -38,9 +40,11 @@ const SignUp = () => {
       const data = await res.json();
 
       if (res.ok) {
+        navigate('/login')
         setFormData({});
         setLoading(false);
         alert("Sign up succesfully")
+
 
         // Redirect or show success message after successful signup
       } else {
@@ -72,19 +76,19 @@ const SignUp = () => {
           </div>
           <div>
             <div className="mb-2 block text-left">
-              <Label htmlFor="email" value="Your email" />
+              <Label htmlFor="email" value="Your Email" />
             </div>
             <TextInput id="email" type="email" placeholder='digitalwallet@gmail.com' required shadow onChange={handlechange} />
           </div>
           <div>
             <div className="mb-2 block text-left">
-              <Label htmlFor="password" value="Your password" />
+              <Label htmlFor="password" value="Your Password" />
             </div>
             <TextInput id="password" placeholder='*********' type="password" required shadow onChange={handlechange} />
           </div>
           <Button gradientDuoTone="pinkToOrange" type="submit">
             {
-              loading ? "Loading" : "Ragister"
+              loading ? "Loading" : "Register"
             }
           </Button>
         </form>
@@ -92,7 +96,7 @@ const SignUp = () => {
           errorMessage ? <Alert className='text-center bg-orange-400' >{errorMessage}</Alert> : ""
         }
         <span className='flex justify-center gap-2' >
-          <span>Alredy have an Account ?</span>
+          <span>Already have an Account ?</span>
           <span className='bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent'>
             <Link to="/login" >SignIn</Link>
           </span>

@@ -2,11 +2,13 @@
 import { Button, Modal } from 'flowbite-react';
 import { useState, useContext } from 'react';
 import { EmailContext } from "../App"
+import useUser from '../utils/getUser';
 const AddTransaction = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('')
   const { email } = useContext(EmailContext);
+  const user = useUser(email)
+
   const [formData, setFormData] = useState({
     transactionType: 'income',
     amount: 0,
@@ -26,9 +28,15 @@ const AddTransaction = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.amount || !formData.category || !formData.date) {
-      return setErrorMessage("All fields are required");
+    // if (!formData.amount || !formData.category || !formData.date) {
+    //   return setErrorMessage("All fields are required");
+    // }
+
+    if (formData.transactionType === 'expense' && formData.amount > user.Money) {
+      alert("Insufficient funds")
+      return setErrorMessage("Insufficient funds");
     }
+
     try {
       const res = await fetch(`https://digital-wallet-backend-falh.onrender.com/addTransaction/users/${email}/transactions`, {
         method: 'POST',
@@ -36,15 +44,17 @@ const AddTransaction = () => {
         body: JSON.stringify(formData),
       });
       if (res.ok) {
-        setSuccessMessage('Transaction added successfully!');
         alert("Your Transaction added")
+        setOpenModal(false);
+        setErrorMessage('');
       } else {
-        alert("might be some issue pls try again")
+        alert("There might be some issue, please try again");
       }
     } catch (error) {
       console.log(error);
     }
   };
+
 
   return (
     <>
@@ -100,7 +110,7 @@ const AddTransaction = () => {
                 <Button type="submit" gradientDuoTone="pinkToOrange" >Add Transaction</Button>
               </div>
             </form>
-            {successMessage && <p className="mt-4 text-green-600">{successMessage}</p>}
+
           </div>
         </Modal.Body>
         {/* <Modal.Footer>

@@ -1,13 +1,15 @@
 import { Alert, Button, Label, TextInput } from 'flowbite-react';
 import Logo from "../assets/logo.png"
 import { Link,useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState,useContext } from 'react';
+import {EmailContext} from "../App"
 
 
 const SignIn = () => {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const [errorMessage, setErrorMessage] = useState(null);
     const [loading, setLoading] = useState(false);
+    const { setEmail } = useContext(EmailContext);
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
     };
@@ -26,6 +28,7 @@ const SignIn = () => {
             const data = await res.json();
             if (res.ok) {
                 // Set email using setEmail from context
+                setEmail(formData.email);
                 console.log('Sign-in successful');
                 alert("Sign In succesfully")
                 navigate('/Home')

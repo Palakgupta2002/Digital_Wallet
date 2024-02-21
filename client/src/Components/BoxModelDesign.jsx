@@ -1,4 +1,5 @@
-import CreditCard from "./CreditCard"
+
+import PaymentForm from "./CreditCard"
 import Searching from "./Serching"
 
 
@@ -6,9 +7,9 @@ import Searching from "./Serching"
 const BoxModelDesign = () => {
   return (
     <div className="block w-full md:flex justify-center  h-full gap-10 ">
-        <div className="w-full h-screen">
+        <div className="w-full h-screen ">
             <div className= "border-2 h-1/2  border-solid border-yellow-400 w-full md:"  >
-                <CreditCard/>
+                <PaymentForm/>
             </div>
             <div className="border-2 h-1/2 border-solid border-yellow-500 w-full md:" >categry wised cards</div>
         </div>

@@ -1,25 +1,19 @@
 
 
 import './App.css'
-import { BrowserRouter,Routes,Route } from 'react-router-dom'
-import SignUp from './Pages/SignUp'
-import SignIn from './Pages/SignIn'
-import Home from './Pages/Home'
+import { createContext, useState } from 'react'
+import Body from './Body';
 
-
+export const EmailContext = createContext();
 function App() {
+
+  const [email, setEmail] = useState('');
   return (
   <div>
-   <BrowserRouter>
-   
-   <Routes>
-      <Route path='/' element={<SignUp/>} />
-      <Route path='/login' element={<SignIn/>}/>
-      <Route path='/Home' element={<Home/>} />
-    </Routes>
-   </BrowserRouter>
-
-  </div>
+    <EmailContext.Provider value={{ email, setEmail }}>
+     <Body/>
+   </EmailContext.Provider>
+ </div>
   )
 }
 

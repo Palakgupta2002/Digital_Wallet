@@ -1,10 +1,12 @@
 
 import { Button, Modal } from 'flowbite-react';
-import { useState } from 'react';
+import { useState,useContext } from 'react';
+import {EmailContext} from "../App"
 const AddTransaction = () => {
   const [openModal, setOpenModal] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('')
+  const { email } = useContext(EmailContext);
   const [formData, setFormData] = useState({
     transactionType: '',
     amount: 0,
@@ -27,7 +29,7 @@ const AddTransaction = () => {
       return setErrorMessage("All fields are required");
     }
     try {
-      const res = await fetch(`http://localhost:3000/addTransaction/users/rajgupta09875@gmail.com/transactions`, {
+      const res = await fetch(`http://localhost:3000/addTransaction/users/${email}/transactions`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

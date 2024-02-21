@@ -1,7 +1,10 @@
 
 import { Button, Modal} from 'flowbite-react';
-import { useState } from 'react';
+import { useState,useContext } from 'react';
+import { EmailContext } from '../App';
+
 const AddMoney = () => {
+  const {email}=useContext(EmailContext)
   const [openModal, setOpenModal] = useState(false);
   const [formData,setFormData]=useState({
     money:0,
@@ -14,7 +17,7 @@ const AddMoney = () => {
   const handleSubmit=async(e)=>{
     e.preventDefault();
     try{
-      const res= await fetch("http://localhost:3000/UpdateMoney/user/gpalak700@gmail.com/money",{
+      const res= await fetch(`http://localhost:3000/UpdateMoney/user/${email}/money`,{
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

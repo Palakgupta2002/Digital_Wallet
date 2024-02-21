@@ -53,7 +53,7 @@ MONGODB_URI=<your_mongodb_uri>
 4. View Transaction History:
 5.Access the Transaction History section to view all your recorded transactions.
 
-## ScrennShot
+## ScreenShot
 
 watch  live: [watch ](https://www.canva.com/design/DAF8jWoYxXw/dpPndZmc7QS4DqLcENDhIw/watch?utm_content=DAF8jWoYxXw&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
 

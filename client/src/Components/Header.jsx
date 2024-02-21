@@ -1,7 +1,17 @@
 import { Button, Navbar } from 'flowbite-react'
 import Logo from "../assets/logo.png"
+import { useContext } from 'react'
+import { EmailContext } from '../App'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
+const navigate=useNavigate();
+const {setEmail}=useContext(EmailContext)
+const handleLogOut=()=>{
+  setEmail('')
+  navigate('/')
+}
+
   return (
     <div>
     <Navbar fluid rounded className=' bg-gradient-to-r from-pink-200 to-orange-300 '>
@@ -14,7 +24,7 @@ const Header = () => {
  <>
  <Button gradientDuoTone="pinkToOrange" outline >Home</Button>
  <Button gradientDuoTone="pinkToOrange" outline >Profile</Button>
- <Button gradientDuoTone="pinkToOrange" outline >Logout</Button>
+ <Button gradientDuoTone="pinkToOrange" onClick={handleLogOut} outline >Logout</Button>
  </>
  </Navbar.Collapse>
 </Navbar>

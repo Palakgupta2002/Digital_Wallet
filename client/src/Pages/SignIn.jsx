@@ -29,7 +29,7 @@ const SignIn = () => {
             if (res.ok) {
                 // Set email using setEmail from context
                 setEmail(formData.email);
-                console.log('Sign-in successful');
+        
                 alert("Sign In succesfully")
                 navigate('/Home')
 

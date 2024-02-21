@@ -14,7 +14,7 @@ const useUser = (email) => {
         }
         const userData = await response.json();
         setUser(userData);
-        console.log(userData); // Log user data
+    
       } catch (error) {
         console.error(error);
       }
@@ -25,7 +25,6 @@ const useUser = (email) => {
     }
   }, [email,user]);
 
-  console.log(user, "user"); // Log user state
   return user;
 };
 

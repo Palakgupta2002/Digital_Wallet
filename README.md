@@ -1,4 +1,5 @@
 # Digital Wallet
+watch video live: [watch live](https://www.canva.com/design/DAF8jWoYxXw/dpPndZmc7QS4DqLcENDhIw/watch?utm_content=DAF8jWoYxXw&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
 ## Introduction
 ### The Digital Wallet is a web application designed to provide users with a convenient way to manage their finances. With features for both logging in and signing up, users can securely access their accounts and perform various financial transactions, including adding money and recording transactions.
 
@@ -54,18 +55,12 @@ MONGODB_URI=<your_mongodb_uri>
 
 ## ScrennShot
 
-###  Sign Up page:-
-<a href="https://ibb.co/fDSCKgg"><img src="https://i.ibb.co/0sXfW77/Screenshot-2.png" alt="Screenshot-2" border="0"></a><br /><a target='_blank' href='https://poetandpoem.com/William-Cowper/Jehovah-Jireh-The-Lord-Will-Provide'>the lord will provide poem</a><br />
+watch video live: [watch live](https://www.canva.com/design/DAF8jWoYxXw/dpPndZmc7QS4DqLcENDhIw/watch?utm_content=DAF8jWoYxXw&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
 
-### Login Pgae:-
-<a href="https://ibb.co/2Yx14Gz"><img src="https://i.ibb.co/BKb5M0h/Screenshot-5.png" alt="Screenshot-5" border="0"></a>
+Thank you for reading it 
 
-### Home Page
-<a href="https://ibb.co/KqhqQSp"><img src="https://i.ibb.co/KqhqQSp/Screenshot-7.png" alt="Screenshot-7" border="0"></a>
 
-### Transaction form 
 
-<a href="https://ibb.co/7rWgcyf"><img src="https://i.ibb.co/7rWgcyf/Screenshot-8.png" alt="Screenshot-8" border="0"></a>
 
 
 

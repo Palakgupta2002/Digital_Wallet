@@ -6,12 +6,12 @@ import SignUp from './Pages/SignUp'
 import SignIn from './Pages/SignIn'
 import Home from './Pages/Home'
 
+
 function App() {
-
-
   return (
   <div>
    <BrowserRouter>
+   
    <Routes>
       <Route path='/' element={<SignUp/>} />
       <Route path='/login' element={<SignIn/>}/>

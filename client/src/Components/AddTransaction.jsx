@@ -8,12 +8,13 @@ const AddTransaction = () => {
   const [errorMessage, setErrorMessage] = useState('')
   const { email } = useContext(EmailContext);
   const [formData, setFormData] = useState({
-    transactionType: '',
+    transactionType: 'income',
     amount: 0,
     description: '',
     category: '',
     date: ''
   });
+  console.log(errorMessage)
 
 
   const handleChange = (e) => {

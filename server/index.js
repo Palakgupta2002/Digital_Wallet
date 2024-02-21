@@ -6,6 +6,7 @@ import signUp from "./routes/signUp.js"
 import signIn from "./routes/signIn.js"
 import updateMoney from "./routes/UpdateMoney.js"
 import addTransaction from "./routes/transactionDetails.js"
+import getUser from "./routes/gateUser.js"
 import cors from "cors"
 dotenv.config()
 const app=express();
@@ -38,3 +39,6 @@ app.use('/UpdateMoney',updateMoney)
 //This is for add a transaction
 
 app.use('/addTransaction',addTransaction)
+
+//This is for to get a user
+app.use('/getUser',getUser)

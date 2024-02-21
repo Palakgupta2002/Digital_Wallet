@@ -4,7 +4,7 @@ const transactionSchema = new mongoose.Schema({
     transactionType: {
         type: String,
         enum: ['income', 'expense'],
-        required: true
+        default: 'income' // Default to 'income' if not provided
     },
     amount: {
         type: Number,
